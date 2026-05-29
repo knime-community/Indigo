@@ -24,4 +24,4 @@ Export-Package: com.epam.indigo,
  com.epam.indigo.knime.plugin
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: com.epam.indigo.knime.plugin.IndigoPlugin
-Bundle-RequiredExecutionEnvironment: JavaSE-21
+Bundle-RequiredExecutionEnvironment: JavaSE-17

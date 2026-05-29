@@ -1,0 +1,72 @@
+Started by user Ali
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/jobs/com.epam.indigo.knime.update-nightly/workspace
+The recommended git tool is: NONE
+using credential knime-github-credentials
+Fetching changes from the remote Git repository
+ > JGit fetch # timeout=10
+Checking out Revision 086ca0b877d30f9c6dd15d3d3b630fb74b2e9e10 (origin/main)
+Commit message: "Added jre feature group"
+The recommended git tool is: NONE
+No credentials specified
+ > /usr/bin/git rev-parse --resolve-git-dir /var/lib/jenkins/jobs/com.epam.indigo.knime.update-nightly/workspace/nodes4knime/indigo/.git # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/knime-community/Indigo # timeout=10
+Fetching upstream changes from https://github.com/knime-community/Indigo
+ > /usr/bin/git --version # timeout=10
+ > git --version # 'git version 2.52.0'
+ > /usr/bin/git fetch --tags --force --progress -- https://github.com/knime-community/Indigo +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision 33f44c765ebe181da104f222d875a117db00f8f1 (origin/master)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git read-tree -mu HEAD # timeout=10
+ > /usr/bin/git checkout -f 33f44c765ebe181da104f222d875a117db00f8f1 # timeout=10
+Commit message: "Upgrade Tycho to 4.0.16 for JavaSE-21 support"
+ > /usr/bin/git rev-list --no-walk 4ff8e386c7dfe1355e34da13be80bb9fdbae8cb8 # timeout=10
+No emails were triggered.
+[workspace] $ /bin/bash -xe /tmp/jenkins14637419514089972046.sh
++ BRANCH=com.epam.indigo.knime.update-nightly
++ KNIME_VERSION=nightly
++ cat
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'version.env'
+[EnvInject] - Variables injected successfully.
+[workspace] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.9.11/bin/mvn -f nodes4knime/indigo/utils/indigo-knime/pom.xml -Dknime.version=nightly -Dmaven.repo.local=/var/lib/jenkins/jobs/com.epam.indigo.knime.update-nightly/workspace/.repository clean verify
+[INFO] Scanning for projects...
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/tycho/tycho-maven-plugin/4.0.16/tycho-maven-plugin-4.0.16.pom
+[WARNING] The POM for org.eclipse.tycho:tycho-maven-plugin:jar:4.0.16 is missing, no dependency information available
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/tycho/tycho-maven-plugin/4.0.16/tycho-maven-plugin-4.0.16.jar
+[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[ERROR] Unresolveable build extension: Plugin org.eclipse.tycho:tycho-maven-plugin:4.0.16 or one of its dependencies could not be resolved:
+	Could not find artifact org.eclipse.tycho:tycho-maven-plugin:jar:4.0.16 in central (https://repo.maven.apache.org/maven2)
+ @ 
+ @ 
+[ERROR] The build could not read 1 project -> [Help 1]
+[ERROR]   
+[ERROR]   The project org.epam.indigo.knime:indigo-knime:1.0.0-SNAPSHOT (/var/lib/jenkins/jobs/com.epam.indigo.knime.update-nightly/workspace/nodes4knime/indigo/utils/indigo-knime/pom.xml) has 1 error
+[ERROR]     Unresolveable build extension: Plugin org.eclipse.tycho:tycho-maven-plugin:4.0.16 or one of its dependencies could not be resolved:
+[ERROR]     	Could not find artifact org.eclipse.tycho:tycho-maven-plugin:jar:4.0.16 in central (https://repo.maven.apache.org/maven2)
+[ERROR]     -> [Help 2]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+[ERROR] [Help 2] http://cwiki.apache.org/confluence/display/MAVEN/PluginManagerException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Archiving artifacts
+Recording test results
+[Checks API] No suitable checks publisher found.
+Collecting Dependency-Check artifact
+Parsing file /var/lib/jenkins/jobs/com.epam.indigo.knime.update-nightly/workspace/dependency-check-report.xml
+Started calculate disk usage of build
+Finished Calculation of disk usage of build in 0 seconds
+Started calculate disk usage of workspace
+Finished Calculation of disk usage of workspace in 0 seconds
+Email was triggered for: Failure - Any
+Sending email for trigger: Failure - Any
+Request made to compress build log
+Not sending mail to user (id: Ali.Marvi, email: Ali.Marvi@knime163.kn.knime.com) with no permission to view com.epam.indigo.knime.update-nightly #14Not sending mail to user (id: noreply, email: noreply@github.com) with no permission to view com.epam.indigo.knime.update-nightly #14Not sending mail to user (id: roman.porozhnetov, email: roman.porozhnetov@gmail.com) with no permission to view com.epam.indigo.knime.update-nightly #14Not sending mail to user (id: Ali.Marvi, email: Ali.Marvi@knime163.kn.knime.com) with no permission to view com.epam.indigo.knime.update-nightly #14Sending email to: thorsten.meinl@knime.com lifescience.opensource@epam.com
+
