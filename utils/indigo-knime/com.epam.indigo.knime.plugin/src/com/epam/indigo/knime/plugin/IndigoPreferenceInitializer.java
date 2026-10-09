@@ -29,7 +29,6 @@ public class IndigoPreferenceInitializer extends AbstractPreferenceInitializer
    public static final String PREF_BACKGROUND_COLOR = "knime.indigo.backgroundColor";
    public static final String PREF_BASE_COLOR = "knime.indigo.baseColor";
    public static final String PREF_VALENCES_VISIBLE = "knime.indigo.valencesVisible";
-   public static final String PREF_SUPERATOM_MODE = "knime.indigo.superatomMode";
 
    @Override
    public void initializeDefaultPreferences ()
@@ -46,6 +45,5 @@ public class IndigoPreferenceInitializer extends AbstractPreferenceInitializer
       store.setDefault(PREF_BACKGROUND_COLOR, "255,255,255");
       store.setDefault(PREF_BASE_COLOR, "0,0,0");
       store.setDefault(PREF_VALENCES_VISIBLE, false);
-      store.setDefault(PREF_SUPERATOM_MODE, "expand");
    }
 }
