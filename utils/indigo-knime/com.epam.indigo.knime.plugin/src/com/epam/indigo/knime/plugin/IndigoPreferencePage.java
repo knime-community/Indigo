@@ -52,8 +52,6 @@ public class IndigoPreferencePage extends FieldEditorPreferencePage implements
       
       String[][] labelModes = {{"none", "none"}, {"terminal-hetero", "terminal-hetero"}, {"hetero", "hetero"}, {"all", "all"}};
       final ComboFieldEditor labelMode = new ComboFieldEditor(IndigoPreferenceInitializer.PREF_LABEL_MODE, "Atom label rendering mode", labelModes, parent);
-      String[][] superatomModes = {{"expand", "expand"},{"collapse", "collapse"}};
-      final ComboFieldEditor superatomMode = new ComboFieldEditor(IndigoPreferenceInitializer.PREF_SUPERATOM_MODE, "Superatoms rendering mode", superatomModes, parent);
       
       final ColorFieldEditor backgroudColor = new ColorFieldEditor(IndigoPreferenceInitializer.PREF_BACKGROUND_COLOR, "Background color", parent);
       final ColorFieldEditor baseColor = new ColorFieldEditor(IndigoPreferenceInitializer.PREF_BASE_COLOR, "Default color for atoms and bonds", parent);
@@ -75,7 +73,6 @@ public class IndigoPreferencePage extends FieldEditorPreferencePage implements
             labelMode.setEnabled(enabled, parent);
             backgroudColor.setEnabled(enabled, parent);
             baseColor.setEnabled(enabled, parent);
-            superatomMode.setEnabled(enabled, parent);
          }
 
          @Override
@@ -95,7 +92,6 @@ public class IndigoPreferencePage extends FieldEditorPreferencePage implements
       addField(imageWidth);
       addField(imageHeight);
       addField(labelMode);
-      addField(superatomMode);
       addField(backgroudColor);
       addField(baseColor);
 
@@ -106,7 +102,6 @@ public class IndigoPreferencePage extends FieldEditorPreferencePage implements
       imageWidth.setEnabled(enabled, parent);
       imageHeight.setEnabled(enabled, parent);
       labelMode.setEnabled(enabled, parent);
-      superatomMode.setEnabled(enabled, parent);
       backgroudColor.setEnabled(enabled, parent);
       baseColor.setEnabled(enabled, parent);
    }
