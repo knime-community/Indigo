@@ -71,7 +71,6 @@ public class IndigoPlugin extends AbstractUIPlugin {
 	private static int molImageHeight;
 	private static boolean enableRendering;
 	private static String labelMode;
-	private static String superatomMode;
 	private static String backgroundColor;
 	private static String baseColor;
 
@@ -107,8 +106,6 @@ public class IndigoPlugin extends AbstractUIPlugin {
 					enableRendering = pStore.getBoolean(PREF_ENABLE_RENDERER);
 				else if (PREF_LABEL_MODE.equals(event.getProperty()))
 					labelMode = pStore.getString(PREF_LABEL_MODE);
-				else if (PREF_SUPERATOM_MODE.equals(event.getProperty()))
-					superatomMode = pStore.getString(PREF_SUPERATOM_MODE);
 				else if (PREF_BACKGROUND_COLOR.equals(event.getProperty()))
 					backgroundColor = pStore.getString(PREF_BACKGROUND_COLOR);
 				else if (PREF_BASE_COLOR.equals(event.getProperty()))
@@ -124,7 +121,6 @@ public class IndigoPlugin extends AbstractUIPlugin {
 		molImageWidth = pStore.getInt(PREF_MOL_IMAGE_WIDTH);
 		molImageHeight = pStore.getInt(PREF_MOL_IMAGE_HEIGHT);
 		labelMode = pStore.getString(PREF_LABEL_MODE);
-		superatomMode = pStore.getString(PREF_SUPERATOM_MODE);
 		backgroundColor = pStore.getString(PREF_BACKGROUND_COLOR);
 		baseColor = pStore.getString(PREF_BASE_COLOR);
 	}
@@ -153,10 +149,6 @@ public class IndigoPlugin extends AbstractUIPlugin {
 
 	public String labelMode() {
 		return labelMode;
-	}
-
-	public String superatomMode() {
-		return superatomMode;
 	}
 
 	public int molImageWidth() {

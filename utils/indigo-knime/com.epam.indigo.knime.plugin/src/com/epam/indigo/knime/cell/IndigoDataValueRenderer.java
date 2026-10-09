@@ -206,7 +206,6 @@ public class IndigoDataValueRenderer extends AbstractPainterDataValueRenderer
          indigo.setOption("render-valences-visible", IndigoPlugin.getDefault().isValencesVisible());
          indigo.setOption("render-coloring", IndigoPlugin.getDefault().coloring());
          indigo.setOption("render-label-mode", IndigoPlugin.getDefault().labelMode());
-         indigo.setOption("render-superatom-mode", IndigoPlugin.getDefault().superatomMode());
          indigo.setOption("render-background-color", IndigoPlugin.getDefault().backgroundColor());
          indigo.setOption("render-base-color", IndigoPlugin.getDefault().baseColor());
          indigo.setOption("render-highlight-thickness-enabled", true);

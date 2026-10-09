@@ -1,6 +1,6 @@
 #!/bin/sh
 
-INDIGO_VERSION=1.3.0beta.r16
+INDIGO_VERSION=1.32.0
 INDIGO_LIB_DIR=./com.epam.indigo.knime.plugin/lib
 
 if [ ! -d $INDIGO_LIB_DIR/ ] 
@@ -18,5 +18,5 @@ done
 
 # JNA
 mvn dependency:get \
-    -Dartifact=net.java.dev.jna:jna:3.5.0:jar \
+    -Dartifact=net.java.dev.jna:jna:5.12.1:jar \
     -Ddest=$INDIGO_LIB_DIR/jna.jar 
