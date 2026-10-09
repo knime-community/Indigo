@@ -2,7 +2,7 @@
 <feature
       id="com.epam.indigo.knime.feature"
       label="Indigo KNIME integration"
-      version="2.0.0.qualifier"
+      version="2.1.0.qualifier"
       provider-name="EPAM Systems, Inc."
       plugin="com.epam.indigo.knime.plugin">
 
